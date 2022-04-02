@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Adicionar Produto</ion-title>
+    <ion-buttons slot="end" style="position: absolute;right: .25rem;">
+      <ion-button (click)="cancelar()" >
+        <ion-icon name="close" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-input placeholder="Nome" [(ngModel)]="data.nome"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input placeholder="Descrição" [(ngModel)]="data.descricao"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="number" placeholder="Qtde" [(ngModel)]="data.qtde"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-select placeholder="Categoria" [(ngModel)]="data.categoria">
+      <ion-select-option value="Informática">Informática</ion-select-option>
+      <ion-select-option value="Escolar">Escolar</ion-select-option>
+      <ion-select-option value="Brinquedos">Brinquedos</ion-select-option>
+      <ion-select-option value="Escritório">Escritório</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="number" placeholder="Preço" [(ngModel)]="data.preco"></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" color="primary" (click)="confirmar()">Confirmar</ion-button>
+  <ion-button expand="block" color="danger" (click)="cancelar()">Cancelar</ion-button>
+
+</ion-content>

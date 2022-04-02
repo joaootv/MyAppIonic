@@ -1,0 +1,20 @@
+<ion-list *ngFor="let f of products">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ f.result.nome }}</ion-card-title>
+      <ion-card-subtitle></ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      Categoria: {{ f.result.categoria }} <br>
+      Descrição: {{ f.result.descricao }} <br>
+      Qtde: {{f.result.qtde}} <br>
+      Preço: {{f.result.preco.toFixed(2).toString().replace(".", ",")}} <br>
+      Preço Estoque: {{f.result.precoEstoque.toFixed(2).toString().replace(".", ",")}}
+    </ion-card-content>
+
+    <ion-card-content>
+      Cód: {{f.id}}
+    </ion-card-content>
+  </ion-card>
+</ion-list>
